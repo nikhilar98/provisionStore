@@ -1,13 +1,81 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: 0;
+}
+nav{
+    background-color: rgb(126, 79, 50);
+    position:fixed;
+    top:0;
+    width: 100%;
+    height: 4.2rem;
+    z-index: 1000;
+    opacity: 0.9;
+    display: flex;
+    justify-content: space-between;
+}
+nav img{
+    width: 100px;
+}
+main{
+    margin-top: 6rem;
+}
+.navLinks{
+    list-style: none;
+    display: flex;
+    gap:2rem;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 1.4rem 2rem;
+    color: white;
+    font-weight: 600;
+}
+.navLink{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.loginContainer{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 500px;
+    margin: 20px;
+}
+.products-container{
+    padding: 1rem;
+    min-width:'200px'
+}
+#wlcm-msg{
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+#about-footer-link{
+    text-decoration: none;
+    color: black;
+}
+@media screen and (max-width:480px) {
+    nav{
+        height: 13rem;
+        display: block;
+        height: 16rem;
+    }
+    nav img{
+         width: 100px;
+    }
+    .navLinks{
+        display: block;
+        padding: 0 1.5rem;
+    }
+    .navLink{
+        margin: 1rem 0;
+        display: block;
+    }
+    main{
+        margin-top: 17rem;
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
