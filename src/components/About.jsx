@@ -30,7 +30,7 @@ const About = (props) => {
             </ul>
             <h4>Steps to start the project</h4>
             <ul>
-                <li><strong>git clone <a href="">https://github.com/nikhilar98/provisionStore</a></strong></li>
+                <li><strong>git clone <a href="https://github.com/nikhilar98/provisionStore">https://github.com/nikhilar98/provisionStore</a></strong></li>
                 <li><strong>cd provisionStore</strong></li>
                 <li><strong>npm install</strong></li>
                 <li><strong>npm start</strong></li>
