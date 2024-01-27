@@ -21,7 +21,7 @@ const About = (props) => {
                         </ol>
                 </li>
             </ul>
-            <h3>Diffulties faced : </h3>
+            <h3>Difficulties faced : </h3>
             <ul>
                 <li>Persisting the user session on refresh, as the app data is reset on refresh.
                 This was managed by storing the user data in local storage.</li>
@@ -35,7 +35,7 @@ const About = (props) => {
                 <li><strong>npm install</strong></li>
                 <li><strong>npm start</strong></li>
             </ul>
-            <h5>The app is also live on this link <a href="https://provision-store-amber.vercel.app/">Link</a></h5>
+            <h5>The app is also live on this link. <a href="https://provision-store-amber.vercel.app/">Link</a></h5>
         </div>
     )
 }
