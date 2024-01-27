@@ -5,7 +5,7 @@ import About from "./components/About";
 import Products from "./components/Products";
 import Login from "./components/Login";
 import appReducer from "./reducers/appReducer";
-
+import logo from "./images/logo.png"
 
 export const appContext = createContext()
 
@@ -34,7 +34,7 @@ function App() {
         <div>
             <header>
               <nav>
-                  <img src="http://www.hindigraphics.in/wp-content/uploads/2019/01/pro.png" alt="logo"/>
+                  <img src={logo} alt="logo"/>
                   <ul className="navLinks">
                     <Link to='/home' className="navLink">Home</Link>
                     <Link to='/about' className="navLink">About</Link>
