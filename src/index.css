@@ -57,6 +57,9 @@ main{
     text-decoration: none;
     color: black;
 }
+.about-container{
+    margin:2rem;
+}
 @media screen and (max-width:480px) {
     nav{
         height: 13rem;
