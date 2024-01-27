@@ -76,24 +76,28 @@ const Products = (props) => {
             <Box 
                 component='form'
                 onSubmit={handleSearch}
-                sx={{width:'50%',minWidth:'200px',display:"flex",alignItems:'center',gap:'1rem'}}>
+                sx={{width:'50%',minWidth:'200px'}}>
                 <TextField 
                     value={search} 
                     onChange={(e)=>{setSearch(e.target.value)}} 
-                    size="small">
-                </TextField>
-                <Button 
-                    type='submit' 
-                    variant="contained" 
-                    size="small">
-                        Search
-                </Button>
-                <Button variant="contained" 
-                    onClick={handleReset}
-                    size="small">Reset</Button>
+                    size="small"
+                    sx={{minWidth:"180px"}}>
+                </TextField><br/>
+                <Box sx={{display:'flex',gap:'1rem',mt:'1rem'}}>
+                    <Button 
+                        type='submit' 
+                        variant="contained" 
+                        size="small">
+                            Search
+                    </Button>
+                    <Button variant="contained" 
+                        onClick={handleReset}
+                        size="small">Reset
+                    </Button>
+                </Box>
             </Box>
             <Box 
-                sx={{width:'50%',minWidth:'200px'}}>
+                sx={{width:'50%',minWidth:'280px'}}>
                 {productsListing}
             </Box>
         </div>
