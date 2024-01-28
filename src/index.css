@@ -5,6 +5,9 @@
 body{
     margin: 0;
 }
+li{
+   word-wrap: break-word;
+}
 nav{
     background-color: rgb(126, 79, 50);
     position:fixed;
