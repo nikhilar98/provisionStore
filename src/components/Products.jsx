@@ -11,8 +11,7 @@ const Products = (props) => {
     const [search,setSearch] = useState("")
     const [filteredProducts,setFilteredProducts] = useState(appData.products)
 
-    console.log('appdata in products',appData)
-    console.log('filtered products',filteredProducts)
+
     const getProducts = async () => { 
         try{
             const response = await axios.get('https://api.kalpav.com/api/v1/product/category/retail',{

@@ -13,8 +13,6 @@ function App() {
 
   const [appData,appDispatch] = useReducer(appReducer,{user:{},products:[],})
 
-  console.log(appData)
-
   const isLoggedIn  = Boolean(Object.keys(appData.user).length)
 
   function handleLogOut(){

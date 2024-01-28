@@ -42,7 +42,6 @@ const Login = (props) => {
         if(Object.keys(errors).length==0){
             setFormErrors({})
             const shaEncrypted = generateSHA256Hash(password)
-            console.log(shaEncrypted)
             const formData = new FormData()
             formData.append('username',username)
             formData.append('password',shaEncrypted) 
@@ -63,7 +62,6 @@ const Login = (props) => {
             }
             catch(err){
                 setFormErrors({loginError:err.response.data.status.message})
-                console.log(err)
             }
         }
         else{ 
