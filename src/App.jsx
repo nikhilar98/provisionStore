@@ -34,7 +34,7 @@ function App() {
         <div>
             <header>
               <nav>
-                  <img src={logo} alt="logo"/>
+                  <Link to='/home'><img src={logo} alt="logo"/></Link>
                   <ul className="navLinks">
                     <Link to='/home' className="navLink">Home</Link>
                     <Link to='/about' className="navLink">About</Link>
