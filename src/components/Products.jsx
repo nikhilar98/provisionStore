@@ -65,47 +65,56 @@ const Products = (props) => {
         })
         :  
         <p>No products available.</p>)
-
+    
+    console.log(appData.user)
 
 
     return (
-        <>
-        <div className="products-container">
-            <h1>Our Products</h1>
-            <Box 
-                component='form'
-                onSubmit={handleSearch}
-                sx={{width:'50%',minWidth:'200px'}}>
-                <TextField 
-                    value={search} 
-                    onChange={(e)=>{setSearch(e.target.value)}} 
-                    size="small"
-                    sx={{minWidth:"180px"}}>
-                </TextField><br/>
-                <Box sx={{display:'flex',gap:'1rem',mt:'1rem'}}>
-                    <Button 
-                        type='submit' 
-                        variant="contained" 
-                        size="small">
-                            Search
-                    </Button>
-                    <Button variant="contained" 
-                        onClick={handleReset}
-                        size="small">Reset
-                    </Button>
-                </Box>
-            </Box>
-            <Box 
-                sx={{width:'50%',minWidth:'280px'}}>
-                {productsListing}
-            </Box>
-        </div>
-        <h3 style={{textAlign:"center"}}>
-            <Link to='/about' id='about-footer-link'>
-                About us
-            </Link>
-        </h3>
-        </>
+                Object.keys(appData.user).length==0 
+                ?
+                <p> Please login to view the products.</p>
+
+                :
+        
+                <>
+
+                    <div className="products-container">
+                        <h1>Our Products</h1>
+                        <Box 
+                            component='form'
+                            onSubmit={handleSearch}
+                            sx={{width:'50%',minWidth:'200px'}}>
+                            <TextField 
+                                value={search} 
+                                onChange={(e)=>{setSearch(e.target.value)}} 
+                                size="small"
+                                sx={{minWidth:"180px"}}>
+                            </TextField><br/>
+                            <Box sx={{display:'flex',gap:'1rem',mt:'1rem'}}>
+                                <Button 
+                                    type='submit' 
+                                    variant="contained" 
+                                    size="small">
+                                        Search
+                                </Button>
+                                <Button variant="contained" 
+                                    onClick={handleReset}
+                                    size="small">Reset
+                                </Button>
+                            </Box>
+                        </Box>
+                        <Box 
+                            sx={{width:'50%',minWidth:'280px'}}>
+                            {productsListing}
+                        </Box>
+                    </div>
+                    <h3 style={{textAlign:"center"}}>
+                        <Link to='/about' id='about-footer-link'>
+                            About us
+                        </Link>
+                    </h3>
+                </>
+        
     )
 }
 
